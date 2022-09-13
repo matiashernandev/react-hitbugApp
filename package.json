@@ -5,14 +5,17 @@
     "version": "0.0.0",
     "type": "module",
     "scripts": {
-        "dev": "vite",
+        "dev": "vite --port 3000",
         "build": "vite build",
         "preview": "vite preview"
     },
     "dependencies": {
+        "@auth0/auth0-react": "^1.10.2",
+        "bootstrap": "^5.2.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "react-router-dom": "^6.3.0"
+        "react-router-dom": "^6.3.0",
+        "sweetalert2": "^11.4.32"
     },
     "devDependencies": {
         "@types/react": "^18.0.17",
