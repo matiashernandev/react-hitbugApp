@@ -1,19 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import logo from "../assets/img/favicon.png";
 import Logout from "./../components/Logout";
 
 function Navbar() {
+    const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+    const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
+
     return (
-        <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
+        <nav className="navbar  navbar-expand-lg bg-dark navbar-dark">
             <div className="container-fluid  ">
-                <Link class="navbar-brand" to="/">
+                <Link className="navbar-brand" to="/">
                     <img
                         src={logo}
                         width="30"
                         height="30"
-                        class="d-inline-block align-top "
+                        className="d-inline-block align-top mx-2 "
                         alt=""
                     />
                     Hitbug
@@ -24,13 +27,17 @@ function Navbar() {
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
+                    aria-expanded={!isNavCollapsed ? true : false}
                     aria-label="Toggle navigation"
+                    onClick={handleNavCollapse}
                 >
                     <span className="navbar-toggler-icon"></span>
                 </button>
+                {/* TODO medio mersa el collapse */}
                 <div
-                    className="collapse navbar-collapse "
+                    className={`${
+                        isNavCollapsed ? "collapse" : ""
+                    } navbar-collapse `}
                     id="navbarSupportedContent"
                 >
                     <ul className="navbar-nav  ms-auto mb-2 mb-lg-0 ">
@@ -38,7 +45,7 @@ function Navbar() {
                             <Link
                                 className="nav-link active"
                                 aria-current="page"
-                                to="profile"
+                                to="/userinfo"
                             >
                                 User Info
                             </Link>
@@ -51,64 +58,16 @@ function Navbar() {
                         <li className="nav-item">
                             <Logout />
                         </li>
-                        <a class="navbar-brand " href="#">
+                        <a className="navbar-brand " href="#">
                             <img
                                 src={logo}
                                 width="30"
                                 height="30"
-                                class="d-inline-block align-top "
-                                alt=""
+                                className="d-inline-block align-top "
+                                alt="logo"
                             />
                         </a>
-                        {/*  <li className="nav-item dropdown">
-                            <a
-                                className="nav-link dropdown-toggle"
-                                href="#"
-                                role="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                            >
-                                Dropdown
-                            </a>
-                            <ul className="dropdown-menu">
-                                <li>
-                                    <a className="dropdown-item" href="#">
-                                        Action
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="dropdown-item" href="#">
-                                        Another action
-                                    </a>
-                                </li>
-                                <li>
-                                    <hr className="dropdown-divider" />
-                                </li>
-                                <li>
-                                    <a className="dropdown-item" href="#">
-                                        Something else here
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link disabled">Disabled</a>
-                        </li> */}
                     </ul>
-                    {/*        <form className="d-flex" role="search">
-                        <input
-                            className="form-control me-2"
-                            type="search"
-                            placeholder="Search"
-                            aria-label="Search"
-                        />
-                        <button
-                            className="btn btn-outline-success"
-                            type="submit"
-                        >
-                            Search
-                        </button>
-                    </form> */}
                 </div>
             </div>
         </nav>

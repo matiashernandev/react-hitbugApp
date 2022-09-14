@@ -1,28 +1,30 @@
 import { Link, Route, Routes } from "react-router-dom";
 
-import Profile from "./pages/Profile";
 import ProtectedRoute from "./components/ProtectedRoute";
+
+import UserInfo from "./pages/UserInfo";
 import Test from "./components/Test";
 import Login from "./pages/Login";
-import NavbarTest from "./layout/Navbar";
+import Navbar from "./layout/Navbar";
 import Repos from "./pages/Repos";
 
 function App() {
     return (
         <div className="App">
-            <NavbarTest />
-            <h1>hola mundo llorando desde app</h1>
+            <Navbar />
+
             <Routes>
                 <Route path="/" element={<Login />} />
 
-                <Route
+                <Route path="/userinfo" element={<UserInfo />} />
+                {/*TODO protegido, poner despues   <Route
                     path="/profile"
                     element={
                         <ProtectedRoute>
                             <Profile />
                         </ProtectedRoute>
                     }
-                />
+                /> */}
                 <Route path="/repos" element={<Repos />} />
                 <Route path="/test" element={<Test />} />
             </Routes>
