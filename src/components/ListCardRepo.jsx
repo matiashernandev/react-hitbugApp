@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
+import { useAppContext } from "../store/Store.jsx";
 
 import CardRepo from "./CardRepo.jsx";
 
 function ListCardRepo() {
-    const [repos, setRepos] = useState();
-    const [loading, setLoading] = useState(true);
-    const [url, setUrl] = useState(
-        `https://api.github.com/users/nkwaaaa/repos`
-    );
+    const store = useAppContext();
+    //  const [repos, setRepos] = useState(store.repos);
+    const [loading, setLoading] = useState(false);
+    //todo arreglar el loading
 
-    useEffect(() => {
+    /*  useEffect(() => {
         async function fetchData() {
             const response = await fetch(url);
             const data = await response.json();
@@ -19,7 +19,7 @@ function ListCardRepo() {
         }
 
         fetchData();
-    }, [url]);
+    }, [url]); */
 
     return (
         <div className="container">
@@ -28,7 +28,7 @@ function ListCardRepo() {
             ) : (
                 <>
                     <div className="row">
-                        {repos?.map((repo) => (
+                        {store.repos?.map((repo) => (
                             <div key={repo.id} className="col-md-4">
                                 <CardRepo repo={repo} />
                             </div>
