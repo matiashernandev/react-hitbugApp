@@ -1,8 +1,13 @@
 import { createContext, useContext, useState, useEffect } from "react";
+import axios from "axios";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const AppContext = createContext({
     repos: [],
+    dataUserGitHub: {},
     updateUrl: (url) => {},
+    updateFilters: (filtro) => {},
+    fetchDataWithLogin: () => {},
 });
 
 export default function Store({ children }) {
@@ -12,20 +17,82 @@ export default function Store({ children }) {
         `https://api.github.com/users/nkwaaaa/repos`
     );
 
-    useEffect(() => {
-        async function fetchData() {
-            const response = await fetch(url);
-            const data = await response.json();
-            setRepos(data);
+    const { user, isAuthenticated, isLoading } = useAuth0();
 
-            //console.log(data);
+    const [filters, setFilters] = useState("");
+
+    const [dataUserGitHub, setDataUserGitHub] = useState({});
+
+    /*     useEffect(() => {
+        try {
+            async function fetchData(filters) {
+                const response = await fetch(url, {
+                    params: filters
+                        ? {
+                              sort: filters.sort,
+                              direction: filters.direction,
+                          }
+                        : undefined,
+                });
+                const data = await response.json();
+                setRepos(data);
+
+                console.log("desde store filters", filters);
+            }
+
+            fetchData(filters);
+        } catch (error) {
+            console.log(error);
         }
+    }, [url, filters]); */
 
-        fetchData();
-    }, [url]);
+    const fetchData = async () => {
+        const response = await axios.get(url, {
+            params: filters
+                ? {
+                      sort: filters.sort,
+                      direction: filters.direction,
+                  }
+                : undefined,
+        });
+
+        setRepos(response.data);
+    };
+
+    const fetchDataWithLogin = async () => {
+        const response = await axios.get(
+            "https://api.github.com/users/nkwaaaa"
+        );
+
+        // console.log(response.data);
+        setDataUserGitHub(response.data);
+
+        return response.data;
+    };
+
+    useEffect(() => {
+        try {
+            fetchDataWithLogin();
+        } catch (error) {
+            console.log(error);
+        }
+    }, []);
+
+    useEffect(() => {
+        try {
+            fetchData(filters);
+        } catch (error) {
+            console.log(error);
+        }
+    }, [url, filters]);
 
     function updateUrl(url) {
-        setUrl(url);
+        setUrl(`https://api.github.com/users/${url}/repos`);
+    }
+
+    function updateFilters(filtro) {
+        setFilters(filtro);
+        console.log("desde update", filtro);
     }
 
     return (
@@ -33,6 +100,9 @@ export default function Store({ children }) {
             value={{
                 repos,
                 updateUrl,
+                updateFilters,
+                fetchDataWithLogin,
+                dataUserGitHub,
             }}
         >
             {children}

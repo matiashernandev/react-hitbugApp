@@ -1,12 +1,20 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 
 import logo from "../assets/img/favicon.png";
 import Logout from "./../components/Logout";
+import { useAppContext } from "../store/Store";
+
+import { useAuth0 } from "@auth0/auth0-react";
 
 function Navbar() {
+    const store = useAppContext();
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
     const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
+    const { isLoading, user, isAuthenticated } = useAuth0();
+    if (isLoading) {
+        return <div>Loading ...</div>;
+    }
 
     return (
         <nav className="navbar  navbar-expand-lg bg-dark navbar-dark">
@@ -59,13 +67,15 @@ function Navbar() {
                             <Logout />
                         </li>
                         <a className="navbar-brand " href="#">
-                            <img
-                                src={logo}
-                                width="30"
-                                height="30"
-                                className="d-inline-block align-top "
-                                alt="logo"
-                            />
+                            {isAuthenticated && (
+                                <img
+                                    src={user.picture}
+                                    width="30"
+                                    height="30"
+                                    className="d-inline-block align-top "
+                                    alt="logo"
+                                />
+                            )}
                         </a>
                     </ul>
                 </div>

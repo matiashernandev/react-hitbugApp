@@ -10,9 +10,9 @@ function ProtectedRoute({ children }) {
         Swal.fire("No estás loggeado", "inicia sesión ಠ_ಠ", "error");
         return <Navigate to="/" />;
     }
-    /* if (isLoading) {
+    if (isLoading) {
         return <div>Loading ...</div>;
-    } */
+    }
 
     return children;
 }

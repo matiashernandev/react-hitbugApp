@@ -26,7 +26,14 @@ function App() {
                     }
                 /> */}
                 <Route path="/repos" element={<Repos />} />
-                <Route path="/test" element={<Test />} />
+                <Route
+                    path="/test"
+                    element={
+                        <ProtectedRoute>
+                            <Test />
+                        </ProtectedRoute>
+                    }
+                />
             </Routes>
         </div>
     );
