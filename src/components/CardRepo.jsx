@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+
+import ButtonModal from "./ButtonModal";
 
 export default function CardRepo({ repo }) {
+    //console.log(repo);
+
     return (
         <div
             className="card container-fluid"
@@ -31,9 +35,8 @@ export default function CardRepo({ repo }) {
                 <a href={repo.html_url} target="_blank" className="card-link">
                     Open on Github
                 </a>
-                <a href="#" className="card-link">
-                    See details
-                </a>
+
+                <ButtonModal repo={repo} />
             </div>
         </div>
     );

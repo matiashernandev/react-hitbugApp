@@ -15,8 +15,8 @@ function Login() {
                 </div>
             </div>
             <ButtonLogin />
-            Esta es la Login
-            <Link to="/test">IR A TEST RUTA PROTEGIDA</Link>
+
+            <Link to="/test">TEST RUTA PROTEGIDA</Link>
         </div>
     );
 }

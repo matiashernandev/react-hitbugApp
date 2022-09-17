@@ -16,15 +16,16 @@ function App() {
             <Routes>
                 <Route path="/" element={<Login />} />
 
-                <Route path="/userinfo" element={<UserInfo />} />
-                {/*TODO protegido, poner despues   <Route
-                    path="/profile"
+                {/* <Route
+                    path="/userinfo"
                     element={
                         <ProtectedRoute>
-                            <Profile />
+                            <UserInfo />
                         </ProtectedRoute>
                     }
                 /> */}
+                <Route path="/userinfo" element={<UserInfo />} />
+
                 <Route path="/repos" element={<Repos />} />
                 <Route
                     path="/test"

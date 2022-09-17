@@ -5,6 +5,8 @@ import { BrowserRouter } from "react-router-dom";
 import { Auth0Provider } from "@auth0/auth0-react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import "animate.css";
+
 import Store from "./store/Store";
 
 const domain = import.meta.env.VITE_AUTH0_DOMAIN;

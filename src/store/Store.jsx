@@ -5,9 +5,11 @@ import { useAuth0 } from "@auth0/auth0-react";
 const AppContext = createContext({
     repos: [],
     dataUserGitHub: {},
+    dataRepo: {},
     updateUrl: (url) => {},
     updateFilters: (filtro) => {},
     fetchDataWithLogin: () => {},
+    // updateRepositorio: (aux) => {},
 });
 
 export default function Store({ children }) {
@@ -22,6 +24,10 @@ export default function Store({ children }) {
     const [filters, setFilters] = useState("");
 
     const [dataUserGitHub, setDataUserGitHub] = useState({});
+
+    const [dataRepo, setDataRepo] = useState("");
+
+    const [repositorio, setRepositorio] = useState(""); // nombre del repo que llega de modal
 
     /*     useEffect(() => {
         try {
@@ -94,6 +100,28 @@ export default function Store({ children }) {
         setFilters(filtro);
         console.log("desde update", filtro);
     }
+    /* -------------------------------------------------------------------------- */
+
+    /*     const repoFetch = async (repositorio) => {
+        const response = await axios(
+            `https://api.github.com/repos/nkwaaaa/${repositorio}`
+        );
+        setDataRepo(response?.data);
+        // console.log("dataRepo:", dataRepo);
+    };
+
+    useEffect(() => {
+        try {
+            repoFetch(repositorio);
+        } catch (error) {
+            console.log(error);
+        }
+    }, [repositorio]);
+
+    function updateRepositorio(aux) {
+        console.log(aux);
+        setRepositorio(aux);
+    } */
 
     return (
         <AppContext.Provider
@@ -103,6 +131,8 @@ export default function Store({ children }) {
                 updateFilters,
                 fetchDataWithLogin,
                 dataUserGitHub,
+                dataRepo,
+                //updateRepositorio,
             }}
         >
             {children}

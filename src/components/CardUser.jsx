@@ -2,7 +2,7 @@ import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import imgDino from "../assets/img/404dino.jpg";
 import imgLinkBackground from "../assets/img/404linkbackground.jpg";
-import imgBackgroundCard from "../assets/img/backgroundcard.jpg";
+import imgBackgroundCard from "../assets/img/Banner_System_Error.webp";
 import { useAppContext } from "../store/Store";
 
 export default function CardUser() {
@@ -15,7 +15,11 @@ export default function CardUser() {
             <div className="container d-flex justify-content-center align-items-center">
                 <div className="card">
                     <div className="upper">
-                        <img src={imgBackgroundCard} className="img-fluid" />
+                        <img
+                            src={imgBackgroundCard}
+                            width="400px"
+                            className="img-fluid"
+                        />
                     </div>
 
                     <div className="user text-center">
