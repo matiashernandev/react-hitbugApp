@@ -60,11 +60,16 @@ function Login() {
                                 </span>
                             </li>
                             <li className="list-group-item d-flex justify-content-between align-items-center">
-                                No se traben, si encuentran una solucion, aunque
-                                tenga malas practicas, usenlas. Siempre hay
-                                lugar a mejora cuando tengan todo mas resuelto.
+                                <strong>
+                                    No se traben, si encuentran una solucion,
+                                    <mark>
+                                        aunque tenga malas practicas, usenlas.
+                                    </mark>
+                                    Siempre hay lugar a mejora cuando tengan
+                                    todo mas resuelto.
+                                </strong>
                                 <span className="badge bg-primary rounded-pill">
-                                    1
+                                    It's Over 9000!
                                 </span>
                             </li>
                         </ul>

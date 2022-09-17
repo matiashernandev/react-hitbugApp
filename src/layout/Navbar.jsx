@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import logo from "../assets/img/favicon.png";
 import Logout from "./../components/Logout";
@@ -50,18 +50,18 @@ function Navbar() {
                 >
                     <ul className="navbar-nav  ms-auto mb-2 mb-lg-0 ">
                         <li className="nav-item">
-                            <Link
-                                className="nav-link active"
+                            <NavLink
+                                className="nav-link "
                                 aria-current="page"
                                 to="/userinfo"
                             >
                                 User Info
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/repos">
+                            <NavLink className="nav-link" to="/repos">
                                 Repos
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className="nav-item">
                             <Logout />

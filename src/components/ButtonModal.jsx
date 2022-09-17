@@ -9,15 +9,32 @@ export default function ButtonModal({ repo }) {
     /*  const [dataRepo, setDataRepo] = useState(""); */
     const [datosRepositorio, setDatosRepositorio] = useState({});
 
-    const showModal = ({ name, description, size }) => {
+    const showModal = ({
+        name,
+        description,
+        size,
+        clone_url,
+        created_at,
+        updated_at,
+        pushed_at,
+        stargazers_count,
+        forks,
+    }) => {
         Swal.fire({
             title: "Detalle Repo",
             html:
                 `<li>nombre: ${name}</li>` +
                 `<li>descripcion: ${description}</li>` +
-                `<li>creacion${size}</li>` +
-                `<li>ultima actualizacion${size}</li>` +
-                `<li>ultimo push${size}</li>`,
+                `<li>tamaño: ${size}</li>` +
+                `<a href="https://youtu.be/sAzlWScHTc4?t=28" target="_blank" ><li>Mostrar cantidad de seguidores(?</li></a>` +
+                `<li>Cantidad forks: ${forks}</li>` +
+                `<li>Estrellas: ${stargazers_count}</li>` +
+                `<a href="${clone_url}" target="_blank" ><li>Link al repo</li></a>` +
+                `<li>fecha creación: ${created_at}</li>` +
+                `<li>ultima actualizacion: ${updated_at}</li>` +
+                `<li>ultimo push: ${pushed_at}</li>`,
+
+            footer: "lenguajes..................",
 
             showClass: {
                 popup: "animate__animated animate__fadeInDown",
