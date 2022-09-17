@@ -6,6 +6,7 @@ const AppContext = createContext({
     repos: [],
     dataUserGitHub: {},
     dataRepo: {},
+    url: "",
     updateUrl: (url) => {},
     updateFilters: (filtro) => {},
     fetchDataWithLogin: () => {},
@@ -98,7 +99,7 @@ export default function Store({ children }) {
 
     function updateFilters(filtro) {
         setFilters(filtro);
-        console.log("desde update", filtro);
+        // console.log("desde update", filtro);
     }
     /* -------------------------------------------------------------------------- */
 
@@ -132,6 +133,7 @@ export default function Store({ children }) {
                 fetchDataWithLogin,
                 dataUserGitHub,
                 dataRepo,
+                url,
                 //updateRepositorio,
             }}
         >

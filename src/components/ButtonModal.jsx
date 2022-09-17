@@ -9,13 +9,15 @@ export default function ButtonModal({ repo }) {
     /*  const [dataRepo, setDataRepo] = useState(""); */
     const [datosRepositorio, setDatosRepositorio] = useState({});
 
-    const showModal = ({ name, description }) => {
+    const showModal = ({ name, description, size }) => {
         Swal.fire({
-            title: "Custom animation with Animate.css",
+            title: "Detalle Repo",
             html:
                 `<li>nombre: ${name}</li>` +
                 `<li>descripcion: ${description}</li>` +
-                `<li>tamaño</li>`,
+                `<li>creacion${size}</li>` +
+                `<li>ultima actualizacion${size}</li>` +
+                `<li>ultimo push${size}</li>`,
 
             showClass: {
                 popup: "animate__animated animate__fadeInDown",
@@ -27,8 +29,10 @@ export default function ButtonModal({ repo }) {
     };
 
     const handleClick = async (e) => {
+        console.log(repo.owner.login);
+
         const response = await axios.get(
-            `https://api.github.com/repos/nkwaaaa/${repo.name}`
+            `https://api.github.com/repos/${repo.owner.login}/${repo.name}`
         );
         const dataRepo = response.data;
 
@@ -36,7 +40,6 @@ export default function ButtonModal({ repo }) {
 
         // setDatosRepositorio(store.dataRepo);
         //store.updateRepositorio(repo.name);
-        console.log(dataRepo.name);
         // console.log(dataRepo.description);
         //console.log(dataRepo.size);
         // console.log(dataRepo.language);
