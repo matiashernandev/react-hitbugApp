@@ -26,7 +26,10 @@ export default function Form() {
     };
     return (
         <div>
-            <form onSubmit={handleSubmit} className="input-group mb-3">
+            <form
+                onSubmit={handleSubmit}
+                className="input-group my-3 container-fluid row row-cols-lg-auto  align-items-center"
+            >
                 <div className="col-auto">
                     <input
                         type="text"
@@ -41,7 +44,7 @@ export default function Form() {
                     <button
                         type="submit"
                         onSubmit={handleSubmit}
-                        className="btn btn-primary mb-3"
+                        className="btn btn-primary"
                     >
                         Search
                     </button>
