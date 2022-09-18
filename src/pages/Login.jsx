@@ -63,9 +63,9 @@ function Login() {
                                 <strong>
                                     No se traben, si encuentran una solucion,
                                     <mark>
-                                        aunque tenga malas practicas, usenlas.
+                                        aunque tenga malas practicas, usenlas
                                     </mark>
-                                    Siempre hay lugar a mejora cuando tengan
+                                    . Siempre hay lugar a mejora cuando tengan
                                     todo mas resuelto.
                                 </strong>
                                 <span className="badge bg-primary rounded-pill">

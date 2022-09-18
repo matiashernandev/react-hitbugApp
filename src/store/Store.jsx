@@ -10,7 +10,6 @@ const AppContext = createContext({
     updateUrl: (url) => {},
     updateFilters: (filtro) => {},
     fetchDataWithLogin: () => {},
-    // updateRepositorio: (aux) => {},
 });
 
 export default function Store({ children }) {
@@ -28,30 +27,7 @@ export default function Store({ children }) {
 
     const [dataRepo, setDataRepo] = useState("");
 
-    const [repositorio, setRepositorio] = useState(""); // nombre del repo que llega de modal
-
-    /*     useEffect(() => {
-        try {
-            async function fetchData(filters) {
-                const response = await fetch(url, {
-                    params: filters
-                        ? {
-                              sort: filters.sort,
-                              direction: filters.direction,
-                          }
-                        : undefined,
-                });
-                const data = await response.json();
-                setRepos(data);
-
-                console.log("desde store filters", filters);
-            }
-
-            fetchData(filters);
-        } catch (error) {
-            console.log(error);
-        }
-    }, [url, filters]); */
+    /* ------------------------------- traer repos ------------------------------ */
 
     const fetchData = async () => {
         const response = await axios.get(url, {
@@ -65,6 +41,16 @@ export default function Store({ children }) {
 
         setRepos(response.data);
     };
+
+    useEffect(() => {
+        try {
+            fetchData(filters);
+        } catch (error) {
+            console.log(error);
+        }
+    }, [url, filters]);
+
+    /* -------------------------------------------------------------------------- */
 
     const fetchDataWithLogin = async () => {
         const response = await axios.get(
@@ -85,14 +71,6 @@ export default function Store({ children }) {
         }
     }, []);
 
-    useEffect(() => {
-        try {
-            fetchData(filters);
-        } catch (error) {
-            console.log(error);
-        }
-    }, [url, filters]);
-
     function updateUrl(url) {
         setUrl(`https://api.github.com/users/${url}/repos`);
     }
@@ -101,28 +79,6 @@ export default function Store({ children }) {
         setFilters(filtro);
         // console.log("desde update", filtro);
     }
-    /* -------------------------------------------------------------------------- */
-
-    /*     const repoFetch = async (repositorio) => {
-        const response = await axios(
-            `https://api.github.com/repos/nkwaaaa/${repositorio}`
-        );
-        setDataRepo(response?.data);
-        // console.log("dataRepo:", dataRepo);
-    };
-
-    useEffect(() => {
-        try {
-            repoFetch(repositorio);
-        } catch (error) {
-            console.log(error);
-        }
-    }, [repositorio]);
-
-    function updateRepositorio(aux) {
-        console.log(aux);
-        setRepositorio(aux);
-    } */
 
     return (
         <AppContext.Provider

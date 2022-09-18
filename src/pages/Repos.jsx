@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ListCardRepo from "../components/ListCardRepo";
 import { useAppContext } from "../store/Store";
+import Swal from "sweetalert2";
 
 function Repos() {
     const store = useAppContext();
@@ -10,9 +11,19 @@ function Repos() {
     const [directionValue, setDirectionValue] = useState("asc");
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        store.updateUrl(user);
-        // console.log(user);
+        try {
+            e.preventDefault();
+
+            store.updateUrl(user);
+        } catch (error) {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Something went wrong!",
+                footer: `<a href="https://youtu.be/ihPraLAcLpI"> You might been hurt babe That ain't no lie</a>`,
+            });
+            console.log("fdasfdsafafsafsaf");
+        }
     };
 
     const handleOrder = () => {

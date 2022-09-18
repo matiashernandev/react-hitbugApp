@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import ButtonModal from "./ButtonModal";
 
@@ -25,10 +25,6 @@ export default function CardRepo({ repo }) {
                     <li className="list-group-item">
                         Sarasa: {repo.stargazers_count}
                     </li>
-                    {/*   <li className="list-group-item">
-                        Stars: repo.stargazers_count
-                    </li>
-                    <li className="list-group-item">Watchers</li> */}
                 </ul>
             </div>
             <div className="card-body">
