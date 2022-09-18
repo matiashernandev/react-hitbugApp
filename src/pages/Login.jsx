@@ -21,14 +21,14 @@ function Login() {
                                 independientes (pueden mockear data para separar
                                 compoenentes dependientes de data)
                                 <span className="badge bg-primary rounded-pill">
-                                    14
+                                    1
                                 </span>
                             </li>
                             <li className="list-group-item d-flex justify-content-between align-items-center">
                                 Pueden dividir las tareas por pantallas o por
                                 funcionalidades, o por ambas.
                                 <span className="badge bg-primary rounded-pill">
-                                    2
+                                    1
                                 </span>
                             </li>
                             <li className="list-group-item d-flex justify-content-between align-items-center">

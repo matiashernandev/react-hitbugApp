@@ -10,7 +10,7 @@ function ListCardRepo() {
         <div className="container">
             <div className="row">
                 {store.repos?.map((repo) => (
-                    <div key={repo.id} className="col-md-4">
+                    <div key={repo.id} className="col-md-3 mb-3 ">
                         <CardRepo repo={repo} />
                     </div>
                 ))}
@@ -20,3 +20,15 @@ function ListCardRepo() {
 }
 
 export default ListCardRepo;
+
+{
+    /* <div className="container">
+<div className="row">
+    {store.repos?.map((repo) => (
+        <div key={repo.id} className="col-md-4">
+            <CardRepo repo={repo} />
+        </div>
+    ))}
+</div>
+</div> */
+}

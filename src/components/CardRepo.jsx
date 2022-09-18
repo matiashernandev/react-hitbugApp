@@ -6,33 +6,32 @@ export default function CardRepo({ repo }) {
     //console.log(repo);
 
     return (
-        <div
-            className="card container-fluid"
-            style={{ width: "18rem", height: "25rem" }}
-        >
-            {/*    //TODO arreglar estilo en línea */}
-            <div className="card-body">
+        <div className="card container d-f h-100 p-0 m-0">
+            <div className="card-body d-flex flex-column justify-content-between  ">
                 <h5 className="card-title">{repo.name}</h5>
                 <h6>Description:</h6>
-                <p className="card-text">{repo.description ?? "no tiene👀"}</p>
+                <p className="card-text ">{repo.description ?? "no tiene👀"}</p>
                 <ul className="list-group list-group-flush">
                     <li className="list-group-item">
                         Lenguage: {repo.language ?? "no tiene"}
                     </li>
                     <li className="list-group-item">
-                        Fecha: {repo.updated_at}
+                        Fecha subida: {repo.updated_at.substring(0, 10)}
                     </li>
                     <li className="list-group-item">
-                        Sarasa: {repo.stargazers_count}
+                        Estrellas: {repo.stargazers_count}
                     </li>
                 </ul>
-            </div>
-            <div className="card-body">
-                <a href={repo.html_url} target="_blank" className="card-link">
-                    Open on Github
-                </a>
-
-                <ButtonModal repo={repo} />
+                <div className="list-group ">
+                    <a
+                        className="card-link p-lg-2"
+                        href={repo.html_url}
+                        target="_blank"
+                    >
+                        Open on Github
+                    </a>
+                    <ButtonModal repo={repo} />
+                </div>
             </div>
         </div>
     );

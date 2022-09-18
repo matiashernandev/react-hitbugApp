@@ -30,16 +30,19 @@ export default function Store({ children }) {
     /* ------------------------------- traer repos ------------------------------ */
 
     const fetchData = async () => {
-        const response = await axios.get(url, {
-            params: filters
-                ? {
-                      sort: filters.sort,
-                      direction: filters.direction,
-                  }
-                : undefined,
-        });
-
-        setRepos(response.data);
+        try {
+            const response = await axios.get(url, {
+                params: filters
+                    ? {
+                          sort: filters.sort,
+                          direction: filters.direction,
+                      }
+                    : undefined,
+            });
+            setRepos(response.data);
+        } catch (error) {
+            console.log("ahora", error);
+        }
     };
 
     useEffect(() => {
@@ -80,6 +83,9 @@ export default function Store({ children }) {
         // console.log("desde update", filtro);
     }
 
+    //console.log(repos);
+    //console.log(dataUserGitHub);
+
     return (
         <AppContext.Provider
             value={{
@@ -90,7 +96,6 @@ export default function Store({ children }) {
                 dataUserGitHub,
                 dataRepo,
                 url,
-                //updateRepositorio,
             }}
         >
             {children}
