@@ -7,12 +7,12 @@ import Test from "./components/Test";
 import Login from "./pages/Login";
 import Navbar from "./layout/Navbar";
 import Repos from "./pages/Repos";
+import NotFound404 from "./pages/NotFound404";
 
 function App() {
     return (
         <div className="App">
             <Navbar />
-
             <Routes>
                 <Route path="/" element={<Login />} />
 
@@ -42,6 +42,7 @@ function App() {
                         </ProtectedRoute>
                     }
                 />
+                <Route path="/*" element={<NotFound404 />} />
             </Routes>
         </div>
     );
