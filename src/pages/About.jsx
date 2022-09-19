@@ -37,7 +37,7 @@ function Login() {
                             <span class="glyphicon glyphicon-globe logo slideanim"></span>
                         </div>
                         <div class="col-sm-8">
-                            <h2>Our Values</h2>
+                            <h2>Comentarios</h2>
                             <br />
                             <h4>
                                 <strong>Comentarios:</strong>lorem ipsum dolor
