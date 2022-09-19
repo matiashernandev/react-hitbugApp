@@ -24,7 +24,14 @@ function App() {
                         </ProtectedRoute>
                     }
                 /> */}
-                <Route path="/userinfo" element={<UserInfo />} />
+                <Route
+                    path="/userinfo"
+                    element={
+                        <ProtectedRoute>
+                            <UserInfo />
+                        </ProtectedRoute>
+                    }
+                />
 
                 <Route path="/repos" element={<Repos />} />
                 <Route

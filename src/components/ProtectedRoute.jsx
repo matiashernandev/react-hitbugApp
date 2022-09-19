@@ -7,7 +7,32 @@ function ProtectedRoute({ children }) {
     const { isAuthenticated, isLoading } = useAuth0();
 
     if (!isAuthenticated) {
-        Swal.fire("No estás loggeado", "inicia sesión ಠ_ಠ", "error");
+        /*  Swal.fire({
+            title: "No estás loggeado",
+            text: "Loggeate ಠ_ಠ",
+
+            width: 600,
+
+            color: "#716add",
+            icon: "error",
+            backdrop: `
+              rgba(0,0,123,0.4)
+              url("/src/assets/img/dancerrr.gif")
+              left center
+              no-repeat
+            `,
+        }); */
+        Swal.fire({
+            title: "No estás loggeado",
+            color: "#716add",
+            text: "Loggeate ಠ_ಠ",
+            background: "#282c34",
+            imageUrl: "/src/assets/img/dancerrr.gif",
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: "RRR image",
+        });
+
         return <Navigate to="/" />;
     }
     if (isLoading) {

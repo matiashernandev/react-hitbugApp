@@ -28,7 +28,7 @@ export default function Form() {
         <div>
             <form
                 onSubmit={handleSubmit}
-                className="input-group my-3 container-fluid row row-cols-lg-auto  align-items-center"
+                className="input-group my-4 container-fluid row row-cols-lg-auto align-items-center"
             >
                 <div className="col-auto">
                     <input

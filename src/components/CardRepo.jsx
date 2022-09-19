@@ -24,7 +24,7 @@ export default function CardRepo({ repo }) {
                 </ul>
                 <div className="list-group ">
                     <a
-                        className="card-link p-lg-2"
+                        className="card-link p-lg-2 text-center"
                         href={repo.html_url}
                         target="_blank"
                     >

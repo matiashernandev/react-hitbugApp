@@ -12,8 +12,8 @@ const UserInfo = () => {
     if (isLoading) {
         return <div>Loading ...</div>;
     }
-
-    /*  if (!isAuthenticated) {
+    /* 
+    if (!isAuthenticated) {
         return (
             <>
                 <h1>no estás logeado amigo</h1>

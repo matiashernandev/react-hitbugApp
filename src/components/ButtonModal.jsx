@@ -19,21 +19,18 @@ export default function ButtonModal({ repo }) {
     }) => {
         //  console.log(created_at.substring(0, 10));
         Swal.fire({
-            title: "Detalle Repo",
+            title: "Details Repo",
             html:
-                `<li>nombre: ${name}</li>` +
-                `<li>descripcion: ${description}</li>` +
-                `<li>tamaño: ${size}</li>` +
+                `<h1>${name}</h1>` +
+                `<h3>Description: ${description}</h3>` +
+                `<li>Size: ${size}</li>` +
                 `<a href="https://youtu.be/sAzlWScHTc4?t=28" target="_blank" ><li>Mostrar cantidad de seguidores(?</li></a>` +
-                `<li>Cantidad forks: ${forks}</li>` +
-                `<li>Estrellas: ${stargazers_count}</li>` +
-                `<a href="${clone_url}" target="_blank" ><li>Link al repo</li></a>` +
-                `<li>fecha creación: ${created_at.substring(0, 10)}</li>` +
-                `<li>ultima actualizacion: ${updated_at.substring(
-                    0,
-                    10
-                )}</li>` +
-                `<li>ultimo push: ${pushed_at.substring(0, 10)}</li>`,
+                `<li>Forks count: ${forks}</li>` +
+                `<li>Stars: ${stargazers_count}</li>` +
+                `<a href="${clone_url}" target="_blank" ><li>GitHub</li></a>` +
+                `<li>Created at: ${created_at.substring(0, 10)}</li>` +
+                `<li>Updated at: ${updated_at.substring(0, 10)}</li>` +
+                `<li>Pushed at: ${pushed_at.substring(0, 10)}</li>`,
 
             footer: "lenguajes..................",
 
@@ -59,7 +56,7 @@ export default function ButtonModal({ repo }) {
 
     return (
         <button className="btn btn-primary" onClick={handleClick}>
-            modal
+            See Details
         </button>
     );
 }
