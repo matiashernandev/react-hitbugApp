@@ -8,10 +8,10 @@ export default function CardRepo({ repo }) {
     return (
         <div className="card container d-f h-100 p-0 m-0">
             <div className="card-body d-flex flex-column justify-content-between  ">
-                <h5 className="card-title">
+                <h5 className="card-title text-nowrap">
                     {repo.name}
                     {repo.fork ? (
-                        <span className="small  ps-1 border  border-opacity-100 border-primary rounded ">
+                        <span className="badge bg-primary ps-2 ms-2 end-0  ">
                             forked
                         </span>
                     ) : (
