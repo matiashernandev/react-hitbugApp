@@ -28,19 +28,19 @@ export default function Form() {
         <div>
             <form
                 onSubmit={handleSubmit}
-                className="input-group my-4 container-fluid row row-cols-lg-auto align-items-center"
+                className="input-group my-4  container-fluid row row-cols-lg-auto align-items-center"
             >
-                <div className="col-auto">
+                <div className="col-auto ms-4 ">
                     <input
                         type="text"
-                        className="form-control"
+                        className="form-control  "
                         id="inputUserGh"
                         placeholder="GitHub Username"
                         value={user}
                         onChange={(e) => setUser(e.target.value)}
                     />
                 </div>
-                <div className="col-auto">
+                <div className="col-auto me-5">
                     <button
                         type="submit"
                         onSubmit={handleSubmit}
@@ -52,7 +52,7 @@ export default function Form() {
                 <select
                     className="form-select"
                     id="inputGroupSelect04"
-                    aria-label="Example select with button addon"
+                    aria-label="aria-label"
                     value={sortValue}
                     onChange={(e) => setSortValue(e.target.value)}
                 >
@@ -76,7 +76,7 @@ export default function Form() {
                 </select>
                 <button
                     onClick={handleOrder}
-                    className="btn btn-outline-secondary"
+                    className="btn btn-outline-secondary me-3"
                     type="button"
                 >
                     Order
