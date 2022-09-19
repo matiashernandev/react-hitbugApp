@@ -53,6 +53,15 @@ function Navbar() {
                             <NavLink
                                 className="nav-link "
                                 aria-current="page"
+                                to="/about"
+                            >
+                                About
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink
+                                className="nav-link "
+                                aria-current="page"
                                 to="/userinfo"
                             >
                                 User Info

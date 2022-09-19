@@ -28,12 +28,12 @@ export default function Form() {
         <div>
             <form
                 onSubmit={handleSubmit}
-                className="input-group my-4  container-fluid row row-cols-lg-auto align-items-center"
+                className="input-group py-4  container-fluid row row-cols-lg-auto align-items-center"
             >
-                <div className="col-auto ms-4 ">
+                <div className="col-auto ms-5 ">
                     <input
                         type="text"
-                        className="form-control  "
+                        className="form-control"
                         id="inputUserGh"
                         placeholder="GitHub Username"
                         value={user}
@@ -76,7 +76,7 @@ export default function Form() {
                 </select>
                 <button
                     onClick={handleOrder}
-                    className="btn btn-outline-secondary me-3"
+                    className="btn btn-primary me-3"
                     type="button"
                 >
                     Order

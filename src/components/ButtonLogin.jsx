@@ -13,7 +13,14 @@ function ButtonLogin() {
     if (isAuthenticated) {
         navigate("/userinfo");
     }
-    return <button onClick={handleClick}>login</button>;
+    return (
+        <button
+            className="btn btn-primary  btn-lg px-4 fw-bold"
+            onClick={handleClick}
+        >
+            Login
+        </button>
+    );
 }
 
 export default ButtonLogin;

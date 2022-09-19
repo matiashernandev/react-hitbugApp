@@ -23,9 +23,9 @@ function ProtectedRoute({ children }) {
             `,
         }); */
         Swal.fire({
-            title: "No estás loggeado",
+            title: "No estás logueado",
             color: "#716add",
-            text: "Loggeate ಠ_ಠ",
+            text: "Logueate ಠ_ಠ",
             background: "#282c34",
             imageUrl: "/src/assets/img/dancerrr.gif",
             imageWidth: 400,

@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import Navbar from "./layout/Navbar";
 import Repos from "./pages/Repos";
 import NotFound404 from "./pages/NotFound404";
+import About from "./pages/About";
 
 function App() {
     return (
@@ -33,6 +34,7 @@ function App() {
                     }
                 />
 
+                <Route path="/about" element={<About />} />
                 <Route path="/repos" element={<Repos />} />
                 <Route
                     path="/test"
