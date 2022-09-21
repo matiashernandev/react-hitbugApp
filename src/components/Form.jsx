@@ -32,6 +32,7 @@ export default function Form() {
             >
                 <div className="col-auto ms-5 ">
                     <input
+                        autoFocus
                         type="text"
                         className="form-control"
                         id="inputUserGh"
