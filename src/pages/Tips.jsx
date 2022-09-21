@@ -1,6 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import ButtonLogin from "../components/ButtonLogin";
 
 function Tips() {
     return (
@@ -15,51 +13,36 @@ function Tips() {
                                 Antes de empezar a codear. Lean bien todo el
                                 enunciado, y separenlo en tareas pequeñas e
                                 independientes (pueden mockear data para separar
-                                compoenentes dependientes de data)
-                                <span className="badge bg-primary rounded-pill">
-                                    1
-                                </span>
+                                componentes dependientes de data).
                             </li>
-                            <li className="list-group-item d-flex justify-content-between align-items-center">
+                            <li className=" list-group-item text-center ">
                                 Pueden dividir las tareas por pantallas o por
                                 funcionalidades, o por ambas.
-                                <span className="badge bg-primary rounded-pill">
-                                    1
-                                </span>
                             </li>
-                            <li className="list-group-item d-flex justify-content-between align-items-center">
+                            <li className="list-group-item text-center">
                                 NO empiecen por el login. Necesitamos ver
                                 context para que puedan almacenar los datos del
                                 usuario de manera “global” y puedan ser
                                 consumidos en el resto de componentes sin tener
                                 que pasar props para todos lados.
-                                <span className="badge bg-primary rounded-pill">
-                                    1
-                                </span>
                             </li>
                             <li className="list-group-item d-flex justify-content-between align-items-center">
-                                la feature de que nadie pueda acceder a la web
+                                La feature de que nadie pueda acceder a la web
                                 hasta loggearse es de las mas complicadas.
                                 Haganla solo si les queda tiempo.
-                                <span className="badge bg-primary rounded-pill">
-                                    1
-                                </span>
                             </li>
                             <li className="list-group-item d-flex justify-content-between align-items-center">
-                                pueden usar todas las herramientas que quieran:
+                                Pueden usar todas las herramientas que quieran:
                                 Librerias de estilos, formularios, etc. Se vale
-                                buscar y copiar codigo de stack overflow o de
+                                buscar y copiar código de Stack Overflow o de
                                 cualquier lugar. La idea es que puedan valerse
                                 por ustedes mismos.
-                                <span className="badge bg-primary rounded-pill">
-                                    1
-                                </span>
                             </li>
                             <li className="list-group-item d-flex justify-content-between align-items-center">
                                 <strong>
-                                    No se traben, si encuentran una solucion,
+                                    No se traben, si encuentran una solución,
                                     <mark>
-                                        aunque tenga malas practicas, usenlas
+                                        aunque tenga malas prácticas, úsenlas
                                     </mark>
                                     . Siempre hay lugar a mejora cuando tengan
                                     todo mas resuelto.

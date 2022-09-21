@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ButtonLogin from "../components/ButtonLogin";
 import Tips from "./Tips";
+import pato from "../assets/img/pato.jpg";
 
 function Login() {
     return (
@@ -11,7 +12,7 @@ function Login() {
                     <div class="row">
                         <div class="col-sm-8">
                             <h2>About</h2>
-                            <br />
+
                             <h4>
                                 Con el objetivo de afianzar los temas vistos y
                                 de aprender nuevas tecnologías a libre elección;
@@ -20,13 +21,18 @@ function Login() {
                                 del profesor Gabriel Morgillo de la carrera
                                 Cerfied Tech Developer en Digital House.
                             </h4>
-                            <br />
-                            <p></p>
-                            <br />
-                            <button class="btn btn-dark ">Get in Touch</button>
+                            <a
+                                href="https://www.linkedin.com/in/mha5/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <button class="btn btn-dark my-4">
+                                    Get in Touch
+                                </button>
+                            </a>
                         </div>
                         <div class="col-sm-4">
-                            <span class="glyphicon glyphicon-signal logo"></span>
+                            <img src={pato} width="400px" alt="" />
                         </div>
                     </div>
                 </div>
