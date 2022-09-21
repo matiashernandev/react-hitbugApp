@@ -3,7 +3,7 @@ import React from "react";
 import ButtonModal from "./ButtonModal";
 
 export default function CardRepo({ repo }) {
-    console.log(repo);
+    //console.log(repo);
 
     return (
         <div className="card container bg-dark text-white border border-primary d-f h-100 p-0 m-0">

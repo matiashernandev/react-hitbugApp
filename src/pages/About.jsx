@@ -1,6 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import ButtonLogin from "../components/ButtonLogin";
 import Tips from "./Tips";
 import pato from "../assets/img/pato.jpg";
 
@@ -8,9 +6,9 @@ function Login() {
     return (
         <div>
             <div className="container px-4 px-lg-5 my-5  text-dark">
-                <div id="about" class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-8">
+                <div id="about" className="container-fluid">
+                    <div className="row">
+                        <div className="col-sm-8">
                             <h2>About</h2>
 
                             <h4>
@@ -26,33 +24,40 @@ function Login() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <button class="btn btn-dark my-4">
+                                <button className="btn btn-dark my-4">
                                     Get in Touch
                                 </button>
                             </a>
                         </div>
-                        <div class="col-sm-4">
+                        <div className="col-sm-4">
                             <img src={pato} width="400px" alt="" />
                         </div>
                     </div>
                 </div>
 
-                <div class="container-fluid bg-grey">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <span class="glyphicon glyphicon-globe logo slideanim"></span>
+                <div className="container-fluid bg-grey">
+                    <div className="row">
+                        <div className="col-sm-4">
+                            <span className="glyphicon glyphicon-globe logo slideanim"></span>
                         </div>
-                        <div class="col-sm-8">
-                            <h2>Comentarios</h2>
-                            <br />
+                        <div className="col-sm-8">
+                            <h2>Tecnologías:</h2>
+
                             <h4>
-                                <strong>Tecnologías:</strong> se utilizó React
-                                para el desarrollo de este proyecto. Se
-                                implementó el sistema de logueo con la librería
-                                Auth0. Para los estilos se utilizó Bootstrap v5.
-                                El estado global fue implementado con
-                                useContext. El sistema de ruteo con React Router
-                                v6.
+                                Se utilizó{" "}
+                                <span className="fst-italic">React</span> para
+                                el desarrollo de este proyecto. Se implementó el
+                                sistema de logueo con la librería{" "}
+                                <span className="fst-italic">Auth0</span>. Para
+                                los estilos se utilizó{" "}
+                                <span className="fst-italic">Bootstrap v5</span>
+                                . El estado global fue implementado con{" "}
+                                <span className="fst-italic">useContext</span>.
+                                El sistema de ruteo con{" "}
+                                <span className="fst-italic">
+                                    React Router v6
+                                </span>
+                                .
                             </h4>
                             <br />
                             <p>

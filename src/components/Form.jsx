@@ -53,11 +53,11 @@ export default function Form() {
                 <select
                     className="form-select"
                     id="inputGroupSelect04"
-                    aria-label="aria-label"
+                    aria-label="Order by"
                     value={sortValue}
                     onChange={(e) => setSortValue(e.target.value)}
                 >
-                    <option defaultValue={sortValue}>Choose...</option>
+                    <option defaultValue={sortValue}>Sort by...</option>
                     <option value="created">Created</option>
                     <option value="updated">Updated</option>
                     <option value="pushed">Pushed</option>
@@ -67,11 +67,13 @@ export default function Form() {
                 <select
                     className="form-select"
                     id="inputGroupSelect04"
-                    aria-label="Example select with button addon"
+                    aria-label="Order by"
                     value={directionValue}
                     onChange={(e) => setDirectionValue(e.target.value)}
                 >
-                    <option defaultValue={directionValue}>Choose...</option>
+                    <option defaultValue={directionValue}>
+                        Sort direction...
+                    </option>
                     <option value="asc">Asc</option>
                     <option value="desc">Desc</option>
                 </select>
