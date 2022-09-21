@@ -17,14 +17,6 @@ function App() {
             <Routes>
                 <Route path="/" element={<Login />} />
 
-                {/* <Route
-                    path="/userinfo"
-                    element={
-                        <ProtectedRoute>
-                            <UserInfo />
-                        </ProtectedRoute>
-                    }
-                /> */}
                 <Route
                     path="/userinfo"
                     element={
@@ -36,14 +28,7 @@ function App() {
 
                 <Route path="/about" element={<About />} />
                 <Route path="/repos" element={<Repos />} />
-                <Route
-                    path="/test"
-                    element={
-                        <ProtectedRoute>
-                            <Test />
-                        </ProtectedRoute>
-                    }
-                />
+                <Route path="/test" element={<Test />} />
                 <Route path="/*" element={<NotFound404 />} />
             </Routes>
         </div>

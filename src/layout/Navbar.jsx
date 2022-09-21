@@ -13,9 +13,11 @@ function Navbar() {
     const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
     const { isLoading, user, isAuthenticated } = useAuth0();
     if (isLoading) {
+        //TODO hacer pantalla de loading
         return <div>Loading ...</div>;
     }
 
+    //TODO logo lleva a user info
     return (
         <nav className="navbar navbar-fixed-top navbar-expand-lg bg-dark navbar-dark">
             <div className="container-fluid  ">
@@ -25,10 +27,11 @@ function Navbar() {
                         width="30"
                         height="30"
                         className="d-inline-block align-top mx-2 "
-                        alt=""
+                        alt="logo hitbug"
                     />
                     Hitbug
                 </Link>
+                {/* TODO aria-expanded ??????????????????????????? */}
                 <button
                     className="navbar-toggler"
                     type="button"
