@@ -1,10 +1,12 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import axios from "axios";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const AppContext = createContext({
     repos: [],
     dataUserGitHub: {},
     dataRepo: {},
+    url: "",
     updateUrl: (url) => {},
     updateFilters: (filtro) => {},
     fetchDataWithLogin: () => {},
@@ -17,13 +19,14 @@ export default function Store({ children }) {
         `https://api.github.com/users/nkwaaaa/repos`
     );
 
+    const { user, isAuthenticated, isLoading } = useAuth0();
+
     const [dataUserGitHub, setDataUserGitHub] = useState({});
 
     const [dataRepo, setDataRepo] = useState("");
 
-    const [filters, setFilters] = useState("");
-
     /* ------------------------------- traer repos ------------------------------ */
+    const [filters, setFilters] = useState("");
 
     const fetchData = async () => {
         try {
@@ -93,6 +96,7 @@ export default function Store({ children }) {
                 fetchDataWithLogin,
                 dataUserGitHub,
                 dataRepo,
+                url,
             }}
         >
             {children}

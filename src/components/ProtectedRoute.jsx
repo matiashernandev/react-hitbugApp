@@ -7,21 +7,6 @@ function ProtectedRoute({ children }) {
     const { isAuthenticated, isLoading } = useAuth0();
 
     if (!isAuthenticated) {
-        /*  Swal.fire({
-            title: "No estás loggeado",
-            text: "Loggeate ಠ_ಠ",
-
-            width: 600,
-
-            color: "#716add",
-            icon: "error",
-            backdrop: `
-              rgba(0,0,123,0.4)
-              url("/src/assets/img/dancerrr.gif")
-              left center
-              no-repeat
-            `,
-        }); */
         Swal.fire({
             title: "No estás logueado",
             color: "#716add",
