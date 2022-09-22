@@ -25,9 +25,9 @@ const UserInfo = () => {
 
     return (
         <div>
-            <div className="container-fluid vh-100 bg-dark text-dark">
+            <div className="container-fluid position-fixed vh-100 bg-dark text-dark">
                 <div className="text-center">
-                    <h1 className="display-4 fw-bolder text-white p-3 ">
+                    <h1 className="display-4 fw-bolder text-white ">
                         User Info
                     </h1>
                     {/*  <p className="lead fw-normal  mb-0">

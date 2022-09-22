@@ -8,7 +8,6 @@ export default function CardUser() {
     const { user, isAuthenticated, isLoading } = useAuth0();
     const store = useAppContext();
 
-    console.log(user);
     return (
         <div>
             <div className="container d-flex justify-content-center align-items-center p-2">
