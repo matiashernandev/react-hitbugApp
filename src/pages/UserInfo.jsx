@@ -3,6 +3,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { Link } from "react-router-dom";
 import CardUser from "../components/CardUser";
 import { useAppContext } from "../store/Store";
+import Loading from "../layout/Loading";
 
 const UserInfo = () => {
     const { user, isAuthenticated, isLoading } = useAuth0();
@@ -10,7 +11,7 @@ const UserInfo = () => {
     const [dataUserGit, setDataUserGit] = useState("");
 
     if (isLoading) {
-        return <div>Loading ...</div>;
+        return <Loading />;
     }
     /* 
     if (!isAuthenticated) {

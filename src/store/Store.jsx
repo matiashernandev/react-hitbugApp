@@ -65,7 +65,7 @@ export default function Store({ children }) {
     useEffect(() => {
         try {
             fetchDataWithLogin();
-            console.log("fetchdatawithlogin");
+            //console.log("fetchdatawithlogin");
         } catch (error) {
             console.log(error);
         }

@@ -1,7 +1,6 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import imgDino from "../assets/img/404dino.jpg";
-import imgLinkBackground from "../assets/img/404linkbackground.jpg";
 import imgBackgroundCard from "../assets/img/Banner_System_Error.webp";
 import { useAppContext } from "../store/Store";
 
@@ -9,7 +8,7 @@ export default function CardUser() {
     const { user, isAuthenticated, isLoading } = useAuth0();
     const store = useAppContext();
 
-    //console.log(user);
+    console.log(user);
     return (
         <div>
             <div className="container d-flex justify-content-center align-items-center">

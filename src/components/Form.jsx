@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useAppContext } from "../store/Store";
-import Swal from "sweetalert2";
 
 export default function Form() {
     const store = useAppContext();

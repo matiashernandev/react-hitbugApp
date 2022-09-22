@@ -1,7 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import ButtonLogin from "./../components/ButtonLogin";
+
 import imgLogin from "../assets/img/fire_IT.gif";
+import { useAuth0 } from "@auth0/auth0-react";
+import Loading from "../layout/Loading";
 
 function Login() {
     return (

@@ -6,22 +6,25 @@ import Logout from "./../components/Logout";
 import { useAppContext } from "../store/Store";
 
 import { useAuth0 } from "@auth0/auth0-react";
+import Loading from "./Loading";
 
 function Navbar() {
     const store = useAppContext();
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
     const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
     const { isLoading, user, isAuthenticated } = useAuth0();
+
     if (isLoading) {
-        //TODO hacer pantalla de loading
-        return <div>Loading ...</div>;
+        return <Loading />;
     }
 
-    //TODO logo lleva a user info
     return (
         <nav className="navbar navbar-fixed-top navbar-expand-lg bg-dark navbar-dark">
             <div className="container-fluid  ">
-                <Link className="navbar-brand" to="/">
+                <Link
+                    className="navbar-brand"
+                    to={isAuthenticated ? "userinfo" : "/"}
+                >
                     <img
                         src={logo}
                         width="30"
@@ -38,7 +41,7 @@ function Navbar() {
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent"
-                    aria-expanded={!isNavCollapsed ? true : false}
+                    // aria-expanded={!isNavCollapsed ? true : false}
                     aria-label="Toggle navigation"
                     onClick={handleNavCollapse}
                 >
@@ -56,15 +59,6 @@ function Navbar() {
                             <NavLink
                                 className="nav-link "
                                 aria-current="page"
-                                to="/about"
-                            >
-                                About
-                            </NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink
-                                className="nav-link "
-                                aria-current="page"
                                 to="/userinfo"
                             >
                                 User Info
@@ -73,6 +67,15 @@ function Navbar() {
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/repos">
                                 Repos
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink
+                                className="nav-link "
+                                aria-current="page"
+                                to="/about"
+                            >
+                                About
                             </NavLink>
                         </li>
                         <li className="nav-item">
