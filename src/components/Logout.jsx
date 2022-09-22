@@ -13,7 +13,7 @@ function Logout() {
 
     return (
         <Link
-            className="nav-link "
+            className={!isAuthenticated ? "nav-link disabled" : "nav-link"}
             onClick={handleClick}
             to={isAuthenticated ? "/" : "#"}
         >

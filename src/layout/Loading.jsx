@@ -5,16 +5,8 @@ import { RotatingLines, RotatingTriangles } from "react-loader-spinner";
 
 function Loading() {
     return (
-        <div className="container">
-            <div className="container-fluid bg-dark vh-100 d-flex justify-content-center align-align-items-center ">
-                {/*           <RotatingLines
-                    className=""
-                    strokeColor="white"
-                    strokeWidth="5"
-                    animationDuration="0.75"
-                    width="96"
-                    visible={true}
-                /> */}
+        <div className=" container-fluid ">
+            <div className="container-fluid bg-dark position-fixed vh-100 vw-100 d-flex justify-content-center align-align-items-center ">
                 <RotatingTriangles
                     className="mt-4 "
                     colors={["#ffde20", "#ffde20", "#ffde20"]}

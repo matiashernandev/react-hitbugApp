@@ -11,7 +11,7 @@ export default function CardUser() {
     console.log(user);
     return (
         <div>
-            <div className="container d-flex justify-content-center align-items-center">
+            <div className="container d-flex justify-content-center align-items-center p-2">
                 <div className="card">
                     <div className="upper">
                         <img
@@ -21,7 +21,7 @@ export default function CardUser() {
                         />
                     </div>
 
-                    <div className="user text-center">
+                    <div className="user text-center mt-3">
                         <div className="profile">
                             <img
                                 src={user?.picture ?? imgDino}
@@ -31,8 +31,8 @@ export default function CardUser() {
                         </div>
                     </div>
 
-                    <div className="mt-5 text-center">
-                        <h4 className="mb-0">{user?.name}</h4>
+                    <div className="my-3 text-center">
+                        <h4 className="my-1">{user?.name}</h4>
                         <span className="text-muted d-block mb-2">
                             {user?.nickname}
                         </span>
@@ -44,7 +44,7 @@ export default function CardUser() {
                             </button>{" "}
                         </a>
 
-                        <div className="d-flex justify-content-between align-items-center mt-4 px-4">
+                        <div className="d-flex justify-content-between align-items-center my-4 px-5">
                             <div className="stats">
                                 <h6 className="mb-0">Followers</h6>
                                 <span>{store.dataUserGitHub.followers}</span>
