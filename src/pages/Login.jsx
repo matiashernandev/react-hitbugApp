@@ -2,13 +2,11 @@ import React from "react";
 import ButtonLogin from "./../components/ButtonLogin";
 
 import imgLogin from "../assets/img/fire_IT.gif";
-import { useAuth0 } from "@auth0/auth0-react";
-import Loading from "../layout/Loading";
 
 function Login() {
     return (
         <div className="font-monospace">
-            {/*     <Link to="/test">TEST RUTA PROTEGIDA</Link> */}
+            <Link to="/test">TEST RUTA PROTEGIDA</Link>
 
             <div className="bg-dark text-secondary position-fixed px-4 py-5 text-center vh-100 vw-100">
                 <a target="_blank" href="https://youtu.be/erRNcPgh-FA">
