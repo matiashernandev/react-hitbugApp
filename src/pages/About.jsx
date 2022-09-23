@@ -5,10 +5,10 @@ import img from "../assets/img/favicon.webp";
 
 function Login() {
     return (
-        <div className="container px-4 px-lg-5 my-5 text-dark">
+        <div className="container px-4 px-lg-5 my-5 text-dark text-center text-lg-start">
             <div id="about" className="container-fluid">
-                <div className="row">
-                    <div className="col-sm-8">
+                <div className="row  ">
+                    <div className="col-sm-12 col-md-8  ">
                         <h2>About</h2>
 
                         <h4>
@@ -30,14 +30,14 @@ function Login() {
                         </a>
                     </div>
                     <div className="col-sm-4">
-                        <img src={pato} width="400px" alt="" />
+                        <img className="img-fluid" src={pato} width="" alt="" />
                     </div>
                 </div>
             </div>
 
             <div className="container-fluid bg-grey">
                 <div className="row">
-                    <div className="col-sm-4 text-center m-auto ">
+                    <div className="col-sm-4  d-none d-md-block text-center m-auto ">
                         <img src={img} alt="" />
                     </div>
                     <div className="col-sm-8">
