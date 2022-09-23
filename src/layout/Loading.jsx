@@ -17,7 +17,7 @@ function Loading() {
                     wrapperStyle={{ position: "relative", top: "25vh" }}
                     wrapperClass="rotating-triangels-wrapper "
                 />
-                <p class="position-absolute fs-1 text-white  bottom-50 ">
+                <p className="position-absolute fs-1 text-white  bottom-50 ">
                     LOADING
                 </p>
             </div>

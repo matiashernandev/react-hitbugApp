@@ -3,7 +3,7 @@ import React from "react";
 function Tips() {
     return (
         <div>
-            <div className="container px-4 px-lg-5 my-5  text-dark">
+            <div className="  my-5  text-dark">
                 <div className="text-center">
                     <h1 className="display-4 fw-bolder">Tips</h1>
 

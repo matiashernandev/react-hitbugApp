@@ -7,7 +7,7 @@ import Loading from "../layout/Loading";
 
 function Login() {
     return (
-        <div>
+        <div className="font-monospace">
             {/*     <Link to="/test">TEST RUTA PROTEGIDA</Link> */}
 
             <div className="bg-dark text-secondary position-fixed px-4 py-5 text-center vh-100 vw-100">
