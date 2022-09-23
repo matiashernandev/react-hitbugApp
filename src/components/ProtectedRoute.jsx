@@ -17,7 +17,7 @@ function ProtectedRoute({ children }) {
             color: "#716add",
             text: "Logueate ಠ_ಠ",
             background: "#282c34",
-            imageUrl: "/src/assets/img/dancerrr.gif",
+            imageUrl: imgDancerrr,
             imageWidth: 400,
             imageHeight: 200,
             imageAlt: "RRR image",
