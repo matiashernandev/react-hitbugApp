@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
-import logo from "../assets/img/favicon.png";
+import logo from "../assets/img/favicon.webp";
 import Logout from "./../components/Logout";
 import { useAppContext } from "../store/Store";
 
@@ -81,7 +81,7 @@ function Navbar() {
                         <li className="nav-item">
                             <Logout />
                         </li>
-                        <a className="navbar-brand " href="#">
+                        <a className="navbar-brand disabled" href="#">
                             {isAuthenticated && (
                                 <img
                                     src={user.picture}

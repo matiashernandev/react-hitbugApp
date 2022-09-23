@@ -1,5 +1,5 @@
 import React from "react";
-import img404link from "../assets/img/404linkbackground.jpg";
+import img404link from "../assets/img/404link.webp";
 import { Link } from "react-router-dom";
 
 export default function NotFound404() {

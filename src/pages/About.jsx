@@ -1,7 +1,7 @@
 import React from "react";
 import Tips from "./Tips";
-import pato from "../assets/img/pato.jpg";
-import img from "../assets/img/favicon.png";
+import pato from "../assets/img/pato.webp";
+import img from "../assets/img/favicon.webp";
 
 function Login() {
     return (
