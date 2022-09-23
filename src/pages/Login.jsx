@@ -24,7 +24,7 @@ function Login() {
                         <p className="fs-4 mt-2 text-light">
                             Proyecto realizado para la materia Frontend 3 a
                             cargo del profesor Gabriel Morgillo de la carrera
-                            Cerfied Tech Developer en Digital House.
+                            Certified Tech Developer en Digital House.
                         </p>
                     </div>
                 </div>

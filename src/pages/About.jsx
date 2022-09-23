@@ -16,8 +16,8 @@ function Login() {
                             aprender nuevas tecnologías a libre elección; este
                             proyecto fue realizado en el cursado del 5to.
                             bimestre para la materia Frontend 3 a cargo del
-                            profesor Gabriel Morgillo de la carrera Cerfied Tech
-                            Developer en Digital House.
+                            profesor Gabriel Morgillo de la carrera Certified
+                            Tech Developer en Digital House.
                         </h4>
                         <a
                             href="https://www.linkedin.com/in/mha5/"

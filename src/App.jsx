@@ -29,7 +29,7 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/repos" element={<Repos />} />
                 <Route path="/test" element={<Test />} />
-                <Route path="/*" element={<NotFound404 />} />
+                <Route path="*" element={<NotFound404 />} />
             </Routes>
         </div>
     );
