@@ -28,12 +28,12 @@ function Tips() {
                             </li>
                             <li className="list-group-item d-flex justify-content-between align-items-center">
                                 La feature de que nadie pueda acceder a la web
-                                hasta loggearse es de las mas complicadas.
+                                hasta loggearse es de las más complicadas.
                                 Haganla solo si les queda tiempo.
                             </li>
                             <li className="list-group-item d-flex justify-content-between align-items-center">
                                 Pueden usar todas las herramientas que quieran:
-                                Librerias de estilos, formularios, etc. Se vale
+                                Librerías de estilos, formularios, etc. Se vale
                                 buscar y copiar código de Stack Overflow o de
                                 cualquier lugar. La idea es que puedan valerse
                                 por ustedes mismos.
@@ -45,7 +45,7 @@ function Tips() {
                                         aunque tenga malas prácticas, úsenlas
                                     </mark>
                                     . Siempre hay lugar a mejora cuando tengan
-                                    todo mas resuelto.
+                                    todo más resuelto.
                                 </strong>
                                 <span className="badge bg-primary rounded-pill">
                                     It's Over 9000!
