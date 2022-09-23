@@ -4,11 +4,11 @@ import imgLogin from "../assets/img/fire_IT.gif";
 
 function Login() {
     return (
-        <div className="font-monospace">
-            <div className="bg-dark text-secondary position-fixed px-4 py-5 text-center vh-100 vw-100">
+        <div className="font-monospace container-fluid">
+            <div className="bg-dark text-secondary  position-fixed start-0 px-4 py-5 text-center vh-100 vw-100">
                 <a target="_blank" href="https://youtu.be/1EBfxjSFAxQ">
                     <img
-                        className="mx-auto "
+                        className="img-fluid"
                         src={imgLogin}
                         alt="Login Image"
                     />

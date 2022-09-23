@@ -12,7 +12,7 @@ import About from "./pages/About";
 
 function App() {
     return (
-        <div className="App">
+        <div className="">
             <Navbar />
             <Routes>
                 <Route path="/" element={<Login />} />
