@@ -19,7 +19,7 @@ function ProtectedRoute({ children }) {
             imageUrl: dancerrr,
             imageWidth: 400,
             imageHeight: 200,
-            imageAlt: "RRR image",
+            imageAlt: "y el loading maestro? 👀",
         });
 
         return <Navigate to="/" />;
