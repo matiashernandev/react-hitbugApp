@@ -5,7 +5,7 @@ import imgBackgroundCard from "../assets/img/Banner_System_Error.webp";
 import { useAppContext } from "../store/Store";
 
 export default function CardUser() {
-    const { user, isAuthenticated, isLoading } = useAuth0();
+    const { user } = useAuth0();
     const store = useAppContext();
 
     return (

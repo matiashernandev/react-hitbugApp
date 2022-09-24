@@ -2,18 +2,29 @@ import React, { useEffect, useState } from "react";
 import { useAppContext } from "../store/Store.jsx";
 
 import CardRepo from "./CardRepo.jsx";
+import Loading from "./../layout/Loading";
 
 function ListCardRepo() {
     const store = useAppContext();
+    console.log(store.repos);
+
+    /*   const repos = store.repos; */
 
     return (
         <div className="container">
             <div className="row">
+                {/* {repos.length === 0 && <Loading />}
+                {repos.length > 0 &&
+                    repos.map((repo) => (
+                        <div key={repo.id} className="col-md-3 mb-3 ">
+                            <CardRepo repo={repo} />
+                        </div>
+                    ))} */}
                 {store.repos?.map((repo) => (
                     <div key={repo.id} className="col-md-3 mb-3 ">
                         <CardRepo repo={repo} />
                     </div>
-                ))}
+                )) ?? <Loading />}
             </div>
         </div>
     );

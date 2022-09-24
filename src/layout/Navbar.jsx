@@ -20,7 +20,7 @@ function Navbar() {
 
     return (
         <nav className="navbar navbar-fixed-top navbar-expand-lg bg-dark navbar-dark">
-            <div className="container-fluid  ">
+            <div className="container-fluid w-100 ">
                 <Link
                     className="navbar-brand"
                     to={isAuthenticated ? "userinfo" : "/"}

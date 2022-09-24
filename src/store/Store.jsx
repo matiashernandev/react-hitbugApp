@@ -37,7 +37,7 @@ export default function Store({ children }) {
             });
             setRepos(response.data);
         } catch (error) {
-            console.log("ahora", error);
+            console.log("catch Error 🙂", error);
         }
     };
 

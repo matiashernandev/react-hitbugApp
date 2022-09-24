@@ -6,7 +6,7 @@ import Form from "../components/Form";
 
 function Repos() {
     return (
-        <div className="bg-dark text-secondary ">
+        <div className="bg-dark text-secondary container-fluid ">
             <Form />
             <ListCardRepo />
         </div>
