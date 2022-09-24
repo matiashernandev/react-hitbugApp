@@ -24,31 +24,30 @@ export default function Form() {
         //console.log("directiio value essss", directionValue);
     };
     return (
-        <div>
-            <form
-                onSubmit={handleSubmit}
-                className="input-group py-4  container-fluid row row-cols-lg-auto align-items-center"
-            >
-                <div className="col-auto ms-5 ">
-                    <input
-                        autoFocus
-                        type="text"
-                        className="form-control"
-                        id="inputUserGh"
-                        placeholder="GitHub Username"
-                        value={user}
-                        onChange={(e) => setUser(e.target.value)}
-                    />
-                </div>
-                <div className="col-auto me-5">
-                    <button
-                        type="submit"
-                        onSubmit={handleSubmit}
-                        className="btn btn-primary"
-                    >
-                        Search
-                    </button>
-                </div>
+        <form
+            onSubmit={handleSubmit}
+            className="input-group py-5 container row d-flex justify-content-end "
+        >
+            <div className="col-3 d-flex justify-content-center ms-5 ">
+                <input
+                    autoFocus
+                    type="text"
+                    className="form-control"
+                    id="inputUserGh"
+                    placeholder="GitHub Username"
+                    value={user}
+                    onChange={(e) => setUser(e.target.value)}
+                />
+                <button
+                    type="submit"
+                    onSubmit={handleSubmit}
+                    className="btn btn-primary"
+                >
+                    Search
+                </button>
+            </div>
+
+            <div className="col-7 d-flex  ">
                 <select
                     className="form-select"
                     id="inputGroupSelect04"
@@ -62,7 +61,6 @@ export default function Form() {
                     <option value="pushed">Pushed</option>
                     <option value="full_name">Full Name</option>
                 </select>
-
                 <select
                     className="form-select"
                     id="inputGroupSelect04"
@@ -78,12 +76,12 @@ export default function Form() {
                 </select>
                 <button
                     onClick={handleOrder}
-                    className="btn btn-primary me-3"
+                    className="btn btn-primary"
                     type="button"
                 >
                     Order
                 </button>
-            </form>
-        </div>
+            </div>
+        </form>
     );
 }
