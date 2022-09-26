@@ -14,10 +14,10 @@ function Login() {
                         <h4>
                             Con el objetivo de afianzar los temas vistos y de
                             aprender nuevas tecnologías a libre elección; este
-                            proyecto fue realizado para la materia Frontend 3 a
-                            cargo del profesor Gabriel Morgillo en el cursado
-                            del 5to. bimestre de la carrera Certified Tech
-                            Developer en Digital House.
+                            proyecto "sandbox" fue realizado para la materia
+                            Frontend 3 a cargo del profesor Gabriel Morgillo en
+                            el cursado del 5to. bimestre de la carrera Certified
+                            Tech Developer en Digital House.
                         </h4>
                         <button className="btn  my-3 d-flex  ">
                             <a

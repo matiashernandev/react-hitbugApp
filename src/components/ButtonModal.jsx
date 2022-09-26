@@ -8,8 +8,6 @@ export default function ButtonModal({ repo }) {
     const store = useAppContext();
     //console.log(repo.languages_url);
 
-    const [languages, setLanguages] = useState([]);
-
     const showModal = ({
         name,
         description,
@@ -35,8 +33,6 @@ export default function ButtonModal({ repo }) {
                 `<li>Created at: ${created_at.substring(0, 10)}</li>` +
                 `<li>Updated at: ${updated_at.substring(0, 10)}</li>` +
                 `<li>Pushed at: ${pushed_at.substring(0, 10)}</li>`,
-
-            footer: languages[0],
 
             showClass: {
                 popup: "animate__animated animate__fadeInDown",

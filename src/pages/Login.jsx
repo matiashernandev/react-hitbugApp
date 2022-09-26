@@ -15,9 +15,9 @@ function Login() {
                 </div>
                 <div className="col-lg-6 mx-auto">
                     <p className="fs-4 mt-2 text-light d-none d-md-block text-center">
-                        Proyecto realizado para la materia Frontend 3 a cargo
-                        del profesor Gabriel Morgillo de la carrera Certified
-                        Tech Developer en Digital House.
+                        Proyecto "sandbox" realizado para la materia Frontend 3
+                        a cargo del profesor Gabriel Morgillo de la carrera
+                        Certified Tech Developer en Digital House.
                     </p>
                 </div>
             </div>

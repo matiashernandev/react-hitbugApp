@@ -31,7 +31,7 @@ export default function CardRepo({ repo }) {
     return (
         <div className="card container bg-dark text-white border border-primary  h-100 p-0 m-0">
             <div className="card-body d-flex flex-column justify-content-between  ">
-                <h5 className="card-title text-truncate text-nowrap">
+                <h5 className="card-title text-nowrap">
                     {repo.name}
                     {repo.fork ? (
                         <span className="badge bg-primary ps-2 ms-2 end-0  ">
