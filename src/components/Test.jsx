@@ -5,6 +5,7 @@ import TestTyped from "./TestTyped";
 
 import { RotatingLines, RotatingTriangles } from "react-loader-spinner";
 import Loading from "../layout/Loading";
+import TestTool from "../tools/TestTool";
 
 function Test() {
     const { isLoading, user } = useAuth0();
@@ -19,7 +20,8 @@ function Test() {
                 width="96"
                 visible={true}
             /> */}
-            <Loading />
+            {/* <Loading /> */}
+            <TestTool />
         </div>
     );
 }

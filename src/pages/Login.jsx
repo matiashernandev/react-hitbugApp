@@ -21,7 +21,7 @@ function Login() {
                         <ButtonLogin />
                     </div>
                     <div className="col-lg-6 mx-auto">
-                        <p className="fs-4 mt-2 text-light">
+                        <p className="fs-4 mt-2 text-light  d-md-block text-center">
                             Proyecto realizado para la materia Frontend 3 a
                             cargo del profesor Gabriel Morgillo de la carrera
                             Certified Tech Developer en Digital House.

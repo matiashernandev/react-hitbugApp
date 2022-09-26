@@ -6,7 +6,7 @@ import Loading from "./../layout/Loading";
 
 function ListCardRepo() {
     const store = useAppContext();
-    console.log(store.repos);
+    //console.log(store.repos);
 
     /*   const repos = store.repos; */
 

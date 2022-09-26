@@ -1,9 +1,14 @@
 import axios from "axios";
 import Swal from "sweetalert2";
 import { useAppContext } from "../store/Store.jsx";
+import { getLanguages } from "./../services/getLanguages";
+import { useState } from "react";
 
 export default function ButtonModal({ repo }) {
     const store = useAppContext();
+    console.log(repo.languages_url);
+
+    const [languages, setLanguages] = useState([]);
 
     const showModal = ({
         name,
@@ -31,7 +36,7 @@ export default function ButtonModal({ repo }) {
                 `<li>Updated at: ${updated_at.substring(0, 10)}</li>` +
                 `<li>Pushed at: ${pushed_at.substring(0, 10)}</li>`,
 
-            footer: "lenguajes..................",
+            footer: languages[0],
 
             showClass: {
                 popup: "animate__animated animate__fadeInDown",
@@ -44,6 +49,21 @@ export default function ButtonModal({ repo }) {
 
     const handleClick = async (e) => {
         //  console.log(repo.owner.login);
+
+        //traer lenguajes F
+        /*  const aux = await getLanguages(repo.owner.login, repo.name);
+
+        const total = Object.values(aux).reduce((acc, curr) => {
+            return acc + curr;
+        }, 0);
+
+        const parsedLanguages = Object.entries(aux).map(([key, value]) => {
+            return {
+                name: key,
+                percentage: (value / total) * 100,
+            };
+        });
+        setLanguages(parsedLanguages); */
 
         const response = await axios.get(
             `https://api.github.com/repos/${repo.owner.login}/${repo.name}`
