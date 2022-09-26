@@ -6,7 +6,7 @@ import { useState } from "react";
 
 export default function ButtonModal({ repo }) {
     const store = useAppContext();
-    console.log(repo.languages_url);
+    //console.log(repo.languages_url);
 
     const [languages, setLanguages] = useState([]);
 

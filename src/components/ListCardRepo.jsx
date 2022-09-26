@@ -10,6 +10,12 @@ function ListCardRepo() {
 
     /*   const repos = store.repos; */
 
+    /*     console.log(store.repos); */
+
+    /*    if (store.repos === "error") {
+        return <h1>Error</h1>;
+    } */
+
     return (
         <div className="container">
             <div className="row">
@@ -20,6 +26,7 @@ function ListCardRepo() {
                             <CardRepo repo={repo} />
                         </div>
                     ))} */}
+
                 {store.repos?.map((repo) => (
                     <div key={repo.id} className="col-md-3 mb-3 ">
                         <CardRepo repo={repo} />
