@@ -14,7 +14,7 @@ export default function Store({ children }) {
     const [repos, setRepos] = useState();
 
     const [url, setUrl] = useState(
-        `https://api.github.com/users/nkwaaaa/repos`
+        `https://api.github.com/users/gabymorgi/repos`
     );
 
     const [dataUserGitHub, setDataUserGitHub] = useState({});
@@ -37,7 +37,7 @@ export default function Store({ children }) {
             });
             setRepos(response.data);
         } catch (error) {
-            console.log("catch Error 🙂", error);
+            console.log("Error no manejado 🙂", error);
         }
     };
 
