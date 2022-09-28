@@ -45,7 +45,7 @@ export default function CardUser() {
                             </button>{" "}
                         </a>
 
-                        <div className="d-flex justify-content-between align-items-center my-4 px-5">
+                        {/* <div className="d-flex justify-content-between align-items-center my-4 px-5">
                             <div className="stats">
                                 <h6 className="mb-0">Followers</h6>
                                 <span>{store.dataUserGitHub.followers}</span>
@@ -60,7 +60,7 @@ export default function CardUser() {
                                 <h6 className="mb-0">following</h6>
                                 <span>{store.dataUserGitHub.following}</span>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
