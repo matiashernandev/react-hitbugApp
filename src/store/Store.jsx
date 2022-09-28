@@ -37,7 +37,8 @@ export default function Store({ children }) {
             });
             setRepos(response.data);
         } catch (error) {
-            console.log("Error no manejado 🙂", error);
+            setRepos(null);
+            console.log("Te la mandaste 🙂", error);
         }
     };
 

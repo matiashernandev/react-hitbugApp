@@ -13,7 +13,7 @@ function ProtectedRoute({ children }) {
     if (!isAuthenticated) {
         Swal.fire({
             title: "No estás logueado",
-            color: "#716add",
+            color: "#fafafa",
             text: "Logueate ಠ_ಠ",
             background: "#282c34",
             imageUrl: dancerrr,
