@@ -6,7 +6,7 @@ function ButtonLogin() {
     const { loginWithRedirect, isAuthenticated } = useAuth0();
     const navigate = useNavigate();
 
-    const handleClick = (e) => {
+    const handleClick = () => {
         loginWithRedirect();
     };
 

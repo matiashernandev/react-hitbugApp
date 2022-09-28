@@ -22,7 +22,7 @@ function ProtectedRoute({ children }) {
             imageAlt: "y el loading maestro? 👀",
         });
 
-        return <Navigate to="/" />;
+        return <Navigate replace to="/" />;
     }
 
     return children;

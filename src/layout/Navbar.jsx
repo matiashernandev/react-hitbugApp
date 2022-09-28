@@ -57,7 +57,11 @@ function Navbar() {
                     <ul className="navbar-nav  ms-auto mb-2 mb-lg-0 ">
                         <li className="nav-item">
                             <NavLink
-                                className="nav-link "
+                                className={
+                                    isAuthenticated
+                                        ? "nav-link"
+                                        : "nav-link text-danger "
+                                }
                                 aria-current="page"
                                 to="/userinfo"
                             >

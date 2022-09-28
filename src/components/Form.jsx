@@ -26,9 +26,9 @@ export default function Form() {
     return (
         <form
             onSubmit={handleSubmit}
-            className="input-group py-5 container row d-flex justify-content-end "
+            className="input-group  py-5  container row d-flex justify-content-end"
         >
-            <div className="col-3 d-flex justify-content-center ms-5 ">
+            <div className="col-12 col-md-3  d-flex justify-content-center ms-5 ">
                 <input
                     autoFocus
                     type="text"
@@ -47,7 +47,7 @@ export default function Form() {
                 </button>
             </div>
 
-            <div className="col-7 d-flex  ">
+            <div className="col-12 col-md-7 d-flex">
                 <select
                     className="form-select"
                     id="inputGroupSelect04"

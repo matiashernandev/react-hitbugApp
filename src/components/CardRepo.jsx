@@ -1,33 +1,9 @@
-import React, { useEffect, useState } from "react";
-
+import React from "react";
 import ButtonModal from "./ButtonModal";
-//import { getLanguages } from "./../services/getLanguages";
 
 export default function CardRepo({ repo }) {
     //console.log(repo);
 
-    /*  const [languages, setLanguages] = useState([]); */
-
-    //traer lenguajes F
-    /*   useEffect(() => {
-        const aux = getLanguages(repo.full_name);
-        console.log(aux);
-
-        const total = Object.values(aux).reduce((acc, curr) => {
-            return acc + curr;
-        }, 0);
-
-        const parsedLanguages = Object.entries(aux).map(([key, value]) => {
-            return {
-                name: key,
-                percentage: (value / total) * 100,
-            };
-        });
-        setLanguages(parsedLanguages);
-
-        return () => {};
-    }, []);
- */
     return (
         <div className="card container bg-dark text-white border border-primary  h-100 p-0 m-0">
             <div className="card-body d-flex flex-column justify-content-between  ">
